@@ -15,11 +15,11 @@ To compile this device server, follow the following steps:
 * in Pogo, click on the floppy disk icon or go to the File Menu and click on Generate.
 * In the Generation Preference Window dialog, unselect the "Code files" check box and select Linux Makefile checkbox.
 * Click on OK
-* export CLASSPATH=<path/to/JTango.jar>
+* export CLASSPATH=\<path/to/JTango.jar\>
 * make jar  (to generate the JAR file)
 
 To run a test instance of the device server (named test), you can execute the following instructions:
-* export CLASSPATH=<path/to/JTango.jar>:cassandramonitor-1.0.jar
+* export CLASSPATH=\<path/to/JTango.jar\>:cassandramonitor-1.0.jar
 * make run
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -46,9 +46,9 @@ If a Cassandra node is configured to listen on a JMX port different than the def
 Java must be installed on the machine where the device server will be running and the CLASSPATH environment variable must be set to point to JTango.jar and cassandramonitor generated jar.
 TANGO_HOST environment variable must be defined to be able to communicate with the Tango Database server (if you are using a Tango database).
 
-To start the device server, run the following command (replacing <instance> with the device server instance name you declared:
+To start the device server, run the following command (replacing \<instance\> with the device server instance name you declared:
 ```
-java org.tango.cassandramonitor/CassandraMonitor  <instance_name>
+java org.tango.cassandramonitor/CassandraMonitor  \<instance_name\>
 
 ```
 

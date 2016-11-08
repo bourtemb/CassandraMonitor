@@ -16,6 +16,7 @@ To compile this device server, follow the following steps:
 * In the Generation Preference Window dialog, unselect the "Code files" check box and select Linux Makefile checkbox.
 * Click on OK
 * Click on OK on the next dialog too. After this, the Makefile should have been generated.
+* mkdir bin
 * export CLASSPATH=\<path/to/JTango.jar\>
 * make jar  (to generate the JAR file)
 

@@ -9,20 +9,27 @@ This project was orginally developped as part of the [Tango HDB++ project](http:
 ## Getting Started
 
 To compile this device server, follow the following steps:
-* git clone https://github.com/tango-controls/CassandraMonitor.git
-* cd CassandraMonitor
-* pogo CassandraMonitor.xmi
+```
+git clone https://github.com/tango-controls/CassandraMonitor.git
+cd CassandraMonitor
+pogo CassandraMonitor.xmi
+```
 * in Pogo, click on the floppy disk icon or go to the File Menu and click on Generate.
 * In the Generation Preference Window dialog, unselect the "Code files" check box and select Linux Makefile checkbox.
 * Click on OK
 * Click on OK on the next dialog too. After this, the Makefile should have been generated.
-* mkdir bin
-* export CLASSPATH=\<path/to/JTango.jar\>
-* make jar  (to generate the JAR file)
 
+To generate the jar file:
+```
+mkdir bin
+export CLASSPATH=<path/to/JTango.jar>
+make jar
+```
 To run a test instance of the device server (named test), you can execute the following instructions:
-* export CLASSPATH=\<path/to/JTango.jar\>:cassandramonitor-1.0.jar
-* make run
+```
+export CLASSPATH=<path/to/JTango.jar>:cassandramonitor-1.0.jar
+make run
+```
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites

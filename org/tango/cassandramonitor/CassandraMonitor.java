@@ -366,7 +366,7 @@ public class CassandraMonitor {
 	 */
 	@Attribute(name="OperationMode", isPolled=true, pollingPeriod=1000)
 	@AttributeProperties(description="Cassandra node current operation mode (NORMAL,JOINING,LEAVING...)",
-	                     label="Operation Mode")
+	                     label="Operation Mode", archiveEventPeriod="3600000")
 	private String operationMode = "";
 	/**
 	 * Read attribute OperationMode
@@ -421,7 +421,8 @@ public class CassandraMonitor {
 	 */
 	@Attribute(name="DataLoad", isPolled=true, pollingPeriod=60000)
 	@AttributeProperties(description="Data Load on disk of the Cassandra node (node from the node property).",
-	                     label="Data Load", unit="KB", standardUnit="1", displayUnit="0.0009765625")
+	                     label="Data Load", unit="KB", standardUnit="1", displayUnit="0.0009765625",
+	                     changeEventAbsolute="1", archiveEventPeriod="3600000", archiveEventAbsolute="1")
 	private long dataLoad;
 	/**
 	 * Read attribute DataLoad
